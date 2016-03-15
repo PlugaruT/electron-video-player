@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>
+            Electron Video Player
+        </title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"/>
+    </head>
+    <body style="padding-top: 15px;">
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="center-align">
+                    <video id="video" width="800" height="auto" autoplay="true" controls="controls" >
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m12">
+                <input id="fileInput" type="file" style="display:none;" onchange="readSingleFile(event);" />
+                <button class="btn waves-effect waves-light" name="action" id="open-file">
+                    From File
+                </button>
+                <button class="btn waves-effect waves-light" name="action" id="camera">
+                    Camera
+                </button>
+                <button class="btn waves-effect waves-light" name="action" id="url-link">
+                    From URL
+                </button>
+                <input id="url" type="text" style="width: 50%;" />
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    © Plugaru Tudor
+                    <a class="grey-text text-lighten-4 right" href="#!">
+                        Laboratory Work #3, Multimedia Systems
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery-2.2.1.min.js" type="text/javascript" charset="utf-8">
+        </script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+        </script>
+        <script>
+            var Hammer = require('./js/hammer.min.js');
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+        </script>
+        <script src="js/index.js" type="text/javascript" charset="utf-8">
+        </script>
+        
+    </body>
+</html>
